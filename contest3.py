@@ -31,7 +31,7 @@ def contest3(arg1):
     expanded_seeds3 = []
     for s3 in seeds3:
         n = 1
-        while ((s3 - (n + 1)) > 0) and ((s3 + (n + 1)) < length) and \
+        while ((s3 - (n + 1)) >= 0) and ((s3 + (n + 1)) < length) and \
               (arg1[s3 - (n + 1)] == arg1[s3 + (n + 1)]):
             n = n + 1
         expanded_seeds3.append( (s3, n ) )
@@ -51,11 +51,13 @@ def contest3(arg1):
             longest = s3[1]
             longest_seed3 = s3
 
+    #print longest_seed2, longest_seed3
+
     solution = None
     if longest_seed2 == None:
         if longest_seed3 != None:
-            solution = arg1[longest_seed3[0] - longest_seed3[1] - 1 :
-                            longest_seed3[0] + longest_seed3[1] + 2]
+            solution = arg1[longest_seed3[0] - longest_seed3[1] :
+                            longest_seed3[0] + longest_seed3[1] + 1]
     else:
         if longest_seed3 == None:
             solution = arg1[longest_seed2[0] - longest_seed2[1] + 1 :
@@ -65,10 +67,9 @@ def contest3(arg1):
                 solution = arg1[longest_seed2[0] - longest_seed2[1] + 1 :
                                 longest_seed2[0] + longest_seed2[1] + 1]
             else:
-                solution = arg1[longest_seed3[0] - longest_seed3[1] - 1 :
-                                longest_seed3[0] + longest_seed3[1] + 2]
+                solution = arg1[longest_seed3[0] - longest_seed3[1] :
+                                longest_seed3[0] + longest_seed3[1] + 1]
 
-    #print "\nSolution:\n"
     print solution
 
 ##############################################################################

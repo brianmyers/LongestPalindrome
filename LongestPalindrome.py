@@ -19,10 +19,14 @@ class _MainWindow(wx.Frame):
         self.Layout()
         self.Show(True)
         
+        contest3.contest3("aa")
+        contest3.contest3("ada")
         contest3.contest3("Short string, no pals")
+        contest3.contest3("!amanaplanacanalpanama")
         contest3.contest3("amanaplanacanalpanama")
-        contest3.contest3("momadam noggon")
+        contest3.contest3("momadam nogon")
         contest3.contest3('issiaiifinginfkoldlfdldfsjdfayimoraissmarttramssiaromiyaf')
+        contest3.contest3('issiaiifinginfkoldlfdldfsjdfayimoraissmart!tramssiaromiyaf')
     #-------------------------------------------------------------------------------------
 ##########################################################################################
 app = wx.App(False)
