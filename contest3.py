@@ -70,6 +70,6 @@ def contest3(arg1):
                 solution = arg1[longest_seed3[0] - longest_seed3[1] :
                                 longest_seed3[0] + longest_seed3[1] + 1]
 
-    print solution
+    return solution
 
 ##############################################################################
